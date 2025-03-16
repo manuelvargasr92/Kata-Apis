@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7275077e-bbce-446a-9e43-0e95e3b11f01" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/TestKata.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serenity.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/bdb/kata/api/tests/DeleteApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/bdb/kata/api/tests/GetApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/bdb/kata/api/tests/PostApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/bdb/kata/api/tests/PutApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/junit-platform.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/newProduct.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/updateProduct.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/TestKata.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/TestKata.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,32 +58,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.ApiTest.validarConsultaDeUsuario.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FakeStoreApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FakeStoreApiTest.testCreateProduct.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FakeStoreApiTest.testGetASingleProductSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FakeStoreApiTest.testGetAllProductsSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FakeStoreApiTest.testGetInvalidEndpoint.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.FakeStoreApiTest.testUpdateProduct.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Kata-Apis [allureReport].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Kata-Apis [clean test].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Kata-Apis [serenityAggregate].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PostApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PutApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Kata-daniel-main/Kata-daniel-main&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.ApiTest.validarConsultaDeUsuario.executor": "Run",
+    "Gradle.DeleteApiTest.executor": "Run",
+    "Gradle.FakeStoreApiTest.executor": "Run",
+    "Gradle.FakeStoreApiTest.testCreateProduct.executor": "Run",
+    "Gradle.FakeStoreApiTest.testGetASingleProductSuccess.executor": "Run",
+    "Gradle.FakeStoreApiTest.testGetAllProductsSuccess.executor": "Run",
+    "Gradle.FakeStoreApiTest.testGetInvalidEndpoint.executor": "Run",
+    "Gradle.FakeStoreApiTest.testUpdateProduct.executor": "Run",
+    "Gradle.GetApiTest.executor": "Run",
+    "Gradle.Kata-Apis [allureReport].executor": "Run",
+    "Gradle.Kata-Apis [clean test].executor": "Run",
+    "Gradle.Kata-Apis [serenityAggregate].executor": "Run",
+    "Gradle.PostApiTest.executor": "Run",
+    "Gradle.PutApiTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Kata-daniel-main/Kata-daniel-main",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Kata-Apis" />

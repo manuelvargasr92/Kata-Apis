@@ -1,51 +1,51 @@
-name: kata-Alejandro # Nombre del pipeline
+name: Kata-Alejandro-API
 
 on:
   push:
     branches:
-      - main  # Se ejecuta el pipeline cuando hay cambios en la rama "main"
-
-  workflow_dispatch:  # Permite ejecutar manualmente el workflow desde GitHub Actions
+      - main  # Ejecutar solo en la rama "main"
 
   schedule:
-    - cron: "0 8 * * 1"  # Ejecuta el pipeline automáticamente cada lunes a las 08:00 AM UTC (ajusta según tu zona horaria)
+    - cron: "30 8 * * *"  # Se ejecuta todos los días a las 8:30 AM UTC
+
+  workflow_dispatch:  # Permite ejecución manual en GitHub Actions
 
 jobs:
   run-api-tests:
-    runs-on: ubuntu-latest  # Define el sistema operativo en el que se ejecutará el pipeline
+    runs-on: ubuntu-latest
 
     strategy:
-      fail-fast: false  # Si una prueba falla, las demás siguen ejecutándose
-      max-parallel: 3  # Permite ejecutar hasta 3 pruebas en paralelo
+      fail-fast: false
+      max-parallel: 3  # Permite la ejecución de 3 pruebas en simultáneo
       matrix:
         test_class:
-          - "org.bdb.kata.api.tests.GetApiTest"  # Prueba para método GET
-          - "org.bdb.kata.api.tests.PostApiTest"  # Prueba para método POST
-          - "org.bdb.kata.api.tests.PutApiTest"  # Prueba para método PUT
-          - "org.bdb.kata.api.tests.DeleteApiTest"  # Prueba para método DELETE
+          - "org.bdb.kata.api.tests.GetApiTest"
+          - "org.bdb.kata.api.tests.PostApiTest"
+          - "org.bdb.kata.api.tests.PutApiTest"
+          - "org.bdb.kata.api.tests.DeleteApiTest"
 
     steps:
-      - name: Checkout repository  # Descarga el código del repositorio
+      - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Set up Java 17 #Confirgura el emtorno con java 17
+      - name: Configurar Java 17
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Verify Gradle Wrapper Permissions  # Asegura que el wrapper de Gradle tenga permisos de ejecución
+      - name: Verificar permisos del wrapper de Gradle
         run: chmod +x gradlew
 
-      - name: Clean and Build Project (without tests)  # Limpia y compila el proyecto sin ejecutar pruebas
+      - name: Construir el proyecto (sin ejecutar tests)
         run: ./gradlew clean build -x test
 
-      - name: Run Serenity BDD API Tests  # Ejecuta las pruebas de API con Serenity BDD
+      - name: Ejecutar pruebas de API con Serenity BDD
         run: ./gradlew clean test --tests ${{ matrix.test_class }}
 
-      - name: Upload Serenity Reports  # Guarda los reportes de Serenity BDD como un artefacto en GitHub Actions
+      - name: Subir reportes de Serenity
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: serenity-reports
           path: target/site/serenity/
