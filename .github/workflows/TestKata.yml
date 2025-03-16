@@ -40,10 +40,9 @@ jobs:
       - name: Ejecutar pruebas de API con Serenity BDD
         run: ./gradlew test --tests ${{ matrix.test_class }}
 
-      - - name: Subir reportes de Serenity
-          if: always()
-          uses: actions/upload-artifact@v4
-          with:
-            name: serenity-reports-${{ matrix.test_class }}
-            path: target/site/serenity/
-
+      - name: Subir reportes de Serenity
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: serenity-reports-${{ matrix.test_class }}
+          path: target/site/serenity/
