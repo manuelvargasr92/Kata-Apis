@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       fail-fast: false
-      max-parallel: 3  # Permite la ejecución de 3 pruebas en simultáneo
+      max-parallel: 3  # Permite ejecutar hasta 3 pruebas en simultáneo
       matrix:
         test_class:
           - "org.bdb.kata.api.tests.GetApiTest"
@@ -29,19 +29,16 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Configurar Java 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4  # Última versión
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Verificar permisos del wrapper de Gradle
+      - name: Dar permisos al wrapper de Gradle
         run: chmod +x gradlew
 
-      - name: Construir el proyecto (sin ejecutar tests)
-        run: ./gradlew clean build -x test
-
       - name: Ejecutar pruebas de API con Serenity BDD
-        run: ./gradlew clean test --tests ${{ matrix.test_class }}
+        run: ./gradlew test --tests ${{ matrix.test_class }}
 
       - name: Subir reportes de Serenity
         if: always()
