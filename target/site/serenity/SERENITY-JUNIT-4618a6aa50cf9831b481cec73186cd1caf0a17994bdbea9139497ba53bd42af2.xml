@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="org.bdb.kata.api.tests.GetApiTest" skipped="0" tests="1" time="0.64" timestamp="2025-03-15 08:14:01"><testcase classname="org.bdb.kata.api.tests.GetApiTest" name="Test get invalid endpoint"/></testsuite>

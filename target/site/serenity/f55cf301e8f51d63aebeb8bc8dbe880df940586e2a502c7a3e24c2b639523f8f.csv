@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Delete api test","Test delete product","SUCCESS","2025-03-15T20:13:53.2250387-05:00[America/Bogota]","0.0","7.94"
+"Get api test","Test get invalid endpoint","SUCCESS","2025-03-15T20:14:01.3795703-05:00[America/Bogota]","0.0","0.64"
+"Get api test","Test get all products success","SUCCESS","2025-03-15T20:14:02.0358214-05:00[America/Bogota]","0.0","0.53"
+"Post api test","Test create product","SUCCESS","2025-03-15T20:14:02.5933988-05:00[America/Bogota]","0.0","0.66"
+"Put api test","Test update product","SUCCESS","2025-03-15T20:14:03.2651372-05:00[America/Bogota]","0.0","0.49"

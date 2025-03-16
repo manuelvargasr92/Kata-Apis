@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Get api test","Test get invalid endpoint","SUCCESS","2025-03-15T20:14:01.3795703-05:00[America/Bogota]","0.0","0.64"
+"Get api test","Test get all products success","SUCCESS","2025-03-15T20:14:02.0358214-05:00[America/Bogota]","0.0","0.53"

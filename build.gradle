@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.11.2'  // Para reportes en Allure
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '3.7.0'  // Plugin de Serenity
+}
+
+group = 'org.bdb.kata'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Serenity BDD
+    testImplementation 'net.serenity-bdd:serenity-core:3.7.0'
+    testImplementation 'net.serenity-bdd:serenity-junit5:3.7.0'
+    testImplementation 'net.serenity-bdd:serenity-rest-assured:3.7.0' // Para pruebas de API
+
+    // JSON - Manejo de archivos
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'  // Asegurar codificación UTF-8
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+    systemProperty 'file.encoding', 'UTF-8'  // Evitar errores de caracteres en Windows
+}
+
+test {
+    systemProperty "allure.results.directory", "build/allure-results"
+}
+tasks.register('serenityAggregate', JavaExec) {
+    description = "Genera los reportes de Serenity"
+    group = "Verification"
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "net.thucydides.core.reports.html.GenerateHtmlReport"
+    args = ["target/site/serenity"]
+}
